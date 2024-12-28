@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #24433c;
+    }
+
+
+/* Gaya untuk tombol dark mode */
+.darkmode {
+  -webkit-tap-highlight-color: transparent; 
+}
+
+/* Gaya untuk container dan header */
+.container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  justify-content: center;
+  padding: 20px;
+  background-color: ;
+  }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Gaya untuk profil */
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover; /* Agar gambar tetap proporsional */
+  box-shadow: 1px 1px 1px #bebebe, -1px -1px 1px #ffffff;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.profile-info .subtitle {
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+.header h1 {
+  font-size: 15px;
+  font-family: 'Orbitron', sans-serif;
+  color: #333;
+  margin-top: -40px;
+}
+
+.fas.fa-check-circle {
+  font-size: 15px;
+  color: #007bff;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  border-radius: 50%;
+  padding: 0px;
+}
+
+/* Gaya untuk tanggal dan waktu */
+.date-time {
+  font-size: 9px;
+  font-family: 'Orbitron', sans-serif;
+  color: 0;
+  margin-top: -30px;
+  margin-left: 31%;
+  font-weight: bold;
+}
+
+/* Gaya tombol geser */
+.darkmode {
+  width: 26px;
+  height: 12px;
+  background-color: gray;
+  border-radius: 30px;
+  position: relative;
+  margin-right: -10%;
+  margin-top: -65px;
+  cursor: pointer;
+  border: 1px solid #333;
+}
+
+.darkmode .toggle-circle {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: left 0.3s ease, background-color 0.3s ease;
+}
+
+.darkmode.active {
+  background-color: #16181b;
+  border: 1px solid red;
+  
+}
+
+.darkmode.active .toggle-circle {
+  background-color: #41ff3c;
+}
+@keyframes blink-colors {
+  0% {
+    background-color: red;
+  }
+  33% {
+    background-color: blue;
+  }
+  66% {
+    background-color: white;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+.darkmode.active .toggle-circle {
+  left: 15px;
+  background-color: #41ff3c; 
+  animation: blink-colors 1.3s infinite;
+}
+
+
+/* Gaya untuk mode gelap */
+body.dark-mode {
+  background-color: #121212;
+  color: #41ff3c;
+}
+
+body.dark-mode .header h1 {
+  color: #fff;
+}
+
+/* ascii */
+
+
+/* ascii */
+#halaman1 {
+  padding: 13px;
+  max-width: 800px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+}
+
+#halaman1 h1 {
+  font-size: 18px;
+  margin-top: -10px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: left; 
+}
+
+#halaman1 p {
+  font-size: 12px;
+  margin-bottom: 5px;
+  text-align: left; 
+
+}
+
+#halaman1 .form-control {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+/* halaman2*/
+#halaman2 {
+    font-family: Arial, sans-serif;
+    margin-left: 0px;
+    margin-top: 10px;
+    padding: 13px;
+}
+
+#halaman2 h1 {
+  font-size: 18px;
+  margin-top: -20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#halaman2 p {
+  font-size: 12px;
+}
+
+  input[type="file"] {
+    display: inline-block;
+    width: 335px;
+    margin-top: 5px;
+    height: 24px;
+    text-align: left;
+background-color: #4CAF50; color: white; border: 2px solid #3e8e41;
+    border-radius: 5px;
+
+    color: white;
+    font-size: 12px;
+    padding: 0;
+     }
+        
+ .slider-label {
+  font-weight: bold;
+  top: 0px;
+  align-items: left;
+  font-size: 10px;
+  width: 15%;
+  left: 0;
+  }
+
+.slider-button {
+    background-color: #333;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0px;
+    border: none;
+    margin: 0 5px;
+    }
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    }
+
+   #height-slider {
+        width: 70px; /* Batasi panjang slider */
+    }
+
+   #width-slider  {
+        width: 70px; /* Batasi panjang slider */
+    }
+    
+   #scale-slider  {
+        width: 70px; /* Batasi panjang slider */
+    }
+
+.slider-button:hover {
+    background-color: #0056b3;
+}
+
+.slider {
+    appearance: none;
+    width: 10px;
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #007BFF;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.checkbox-container label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    color: #333;
+    display: flex;
+    align-items: left;
+    margin-top: 10px;
+    gap: 0px;
+}
+
+        input[type="range"] {
+            width: 73%;
+            height: 17px;
+            background: red;
+            border-radius: 50px;
+        }
+        
+        input[type="range"]::-moz-range-thumb:hover {
+            background-color: #21a1f1;
+        }
+
+#ascii-output {
+    font-family: monospace;
+    line-height: 0.1;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #89a8c7;
+            width: 335px;
+            height: 250px; Mengurangi lebar area */
+    font-size: calc(0.1vw); /* Mengecilkan ukuran font */
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+
+
+
+#ascii-output {
+  display: flex; /* Membuat teks lebih terpusat */
+}
+
+button {
+    width: 108px;
+    height: 30px;
+    margin-top: 5px;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+background-color: #4CAF50; color: white; border: 2px solid #3e8e41;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    }
+
+button:hover {
+    background-color: #dcdcdc;
+    border-color: #888;
+}
+
+
+/* Icon menu Navigasi text*/
+    nav.top-menu {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 0px;
+      padding: 10px 0;
+    }
+
+    .menu-item {
+      color: ;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu-item i {
+      font-size: 25px;
+      margin-bottom: 5px;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .menu-item i:active {
+      transform: scale(1.2);
+      color: #ff6347;
+    }
+
+    .menu-item span {
+      font-size: 9px;
+      margin-top: 5px;
+      pointer-events: none;
+    }
+
+    .content {
+      padding: 20px;
+      display: none;
+    }
+
+    .content h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .content p {
+      font-size: 16px;
+    }
+
+    /* Profil menu */
+    #menu-profil {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      width: 300px;
+      height: 100%;
+      background-color: #444;
+      color: white;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    #menu-profil h2 {
+      margin-bottom: 20px;
+    }
+
+    #menu-profil .profil-info {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #menu-profil .profil-foto {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    #menu-profil .profil-nama {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    #menu-profil .profil-email {
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    #menu-profil ul {
+      list-style: none;
+    }
+
+    #menu-profil ul li {
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+
+    #menu-profil ul li:hover {
+      color: #ff6347;
+    }
+    
+ /* Hilangkan efek klik bawaan smartphone */
+    a, button, .menu-item {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+
+        .ktp-container {
+            width: 340px;
+            font-size: 12px;
+            background: #d9f2fc;
+            box-sizing: border-box;
+            margin: 0 auto; 
+            margin-left: -10px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px #2F4F4F, -1px -1px 1px #ffffff;
+            background-size: cover;
+            background-position: center;
+        }
+        
+
+        .ktp-content {
+            display: flex;
+            padding-bottom: 0px
+            justify-content: space-between;
+        }
+
+
+        .ktp-left p, .ktp-right p {
+            margin: 10;
+            font-size: 9px;
+        }
+
+h1, h2, h3, p b {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}
+
+        .ktp-right {
+            text-align: center;
+            width:center;
+            padding: 0px;
+            margin-left: 50px;
+        }
+
+        .photo-box {
+            width: 100px;
+            height: 130px;
+            background: #fff;
+            border: 1px solid #ccc;
+            margin-bottom: 0px;
+            position: relative;
+        }
+
+        .photo-box input {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+        
+        #ktp-generator {
+            margin-left: -10px;
+            padding: -20px 0px;
+            background-color: #4CAF50; color: white; border: 2px solid #3e8e41;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 12px;
+            cursor: pointer;
+            box-shadow: 1px 1px 1px #2F4F4F, -1px -1px 1px #ffffff;
+            transition: background-color 0.3s;
+        }
+
+        #ktp-generator:hover {
+            background-color: #0056b3;
+        }
+
+
+        .button-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            height: 150px; 
+            padding: 1px;
+            width: 100%;
+            border-radius: 5px;
+            gap: 0px;
+        }
+        
+
+    .customStyle {
+        padding: 0px 0px;
+        background-color: #4CAF50; color: white; border: 2px solid #3e8e41;
+        color: white;
+        border-radius: 3px;
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+            height: 35px; 
+            width: 100%;
+    }
+
+    .customStyle:hover {
+    background-color: #dcdcdc;
+    border-color: #888;
+    }
+
+    .button-wrapper::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .button-wrapper::-webkit-scrollbar-thumb {
+        background-color: yellow;
+        border-radius: 4px;
+    }
+
+    .button-wrapper::-webkit-scrollbar-thumb:hover {
+        background-color: green;
+    }
+
+
+ /* Halaman 4 */
+    .ascii-box {
+      border: 1px solid gray;
+      border-radius: 5px;
+      background-color: ;
+      padding: 5px;
+      margin-top: 20px;
+      overflow: auto;
+      max-height: 400px;
+      font-size: 12px;
+      
+    }
+
+    pre {
+      text-align: left;
+      white-space: pre;
+      margin: 0;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .copy-btn {
+      margin-top: 10px;
+      background-color: #4CAF50; color: white; border: 2px solid #3e8e41;
+
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      background-color: #4fa3d1;
+    }
+
+
+
+
+#Ai {
+  padding: 13px;
+  max-width: 800px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+}
+#Ai h1 {
+  font-size: 18px;
+  margin-top: -10px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: left; 
+}
+
+#Ai p {
+  font-size: 12px;
+  margin-bottom: 5px;
+  text-align: left; 
+
+}
+
+
+
+
+
+
+    .promptBox {
+      width: 100%;
+      height: 95px;
+      padding: 5px;
+      margin-bottom: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+    .promptBox:focus {
+  border-color: #007bff; /* Warna batas saat fokus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efek cahaya */
+}
+    
+    button:hover {
+      background-color: #0056b3;
+    }
+    button.hide {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    /* Gaya Loader */
+    .loader {
+      display: none;
+      border: 5px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 5px solid #007BFF;
+      width: 40px;
+      height: 40px;
+      margin: 20px auto;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Gaya Output */
+    #image-container img {
+      width: 100%;
+      margin-top: 10px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    /* Tombol Unduh */
+    #dlButton {
+      display: none;
+      background-color: #28a745;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    #dlButton:hover {
+      background-color: #218838;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- JUDUL -->
+<div class="container">
+  <div class="header">
+    <div class="profile">
+      <img src="https://iili.io/2CHtVnt.md.jpg" alt="Foto Profil" class="profile-picture">
+      <div class="profile-info">
+        <p class="digital-text">
+        <h1>Tommy Web <i class="fas fa-check-circle"></i>
+        
+        <p class="subtitle">Web Developer & Designer</p>
+
+      </div>
+    </div>
+    <div class="darkmode" id="darkModeToggle">
+      <div class="toggle-circle"></div>
+    </div>
+  </div>
+</div>
+    <div id="timeContainer">
+      <p id="dateTime" class="date-time"></p>
+    </div>
+    
+    <!-- Menu Navigasi -->
+    <nav class="top-menu">
+      <div class="menu-item" data-target="#Ai">
+        <i class="fas fa-images"></i>
+        <span>Creatr Ai</span>
+      </div>
+
+   
+      <div class="menu-item" data-target="#halaman1">
+        <i class="fab fa-amilia"></i>
+        <span>ASCII Text</span>
+      </div>
+      
+      
+      <div class="menu-item" data-target="#halaman2">
+        <i class="far fa-images"></i>
+        <span>ASCII Image</span>
+      </div>
+      <div class="menu-item" data-target="#halaman3">
+        <i class="fas fa-address-card"></i>
+        <span>ID Card</span>
+      </div>
+      <div class="menu-item" data-target="#halaman4">
+        <i class="fab fa-mizuni"></i>
+        <span>Notifikasi</span>
+      </div>
+      <div class="menu-item" data-target="#halaman5">
+        <i class="fas fa-th-list"></i>
+        <span>Pengaturan</span>
+      </div>
+    </nav>
+ <hr>
+
+<div id="content-container" style="
+  display: block; 
+  max-height: 500px; 
+  overflow-y: auto;">
+
+      
+    <!-- Konten -->
+<section id="Ai" class="content">
+  <h1>ASCII Art Generator</h1>
+  <p>Masukkan teks di bawah ini dan pilih gaya untuk mengubahnya menjadi ASCII art!</p>
+  
+  <div class="generator">
+    <div class="input">
+      <!-- Input teks sebagai kotak teks -->
+      <textarea class="promptBox" id="prompt" placeholder="Masukkan prompt di sini..."></textarea>
+    </div>
+
+    <button 
+      id="generate" 
+      style="background-color: #4CAF50; color: white; border: 2px solid #3e8e41; border-radius: 8px; font-size: 12px; width:150px; height: 30px; cursor: pointer; margin-top: -10px; ">
+      Generate Images
+    </button>
+
+    <div class="loader" id="loading-spinner"></div>
+    <div class="output">
+      <h2 id="generatedText" style="font-size: 15px; margin-top: 5px;">Generated Images:</h2>
+      <div id="image-container" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;"></div>
+      <a id="dlButton" href="#" download style="display: none;">Download</a>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const generateButton = document.getElementById("generate");
+  const promptInput = document.getElementById("prompt");
+  const imageContainer = document.getElementById("image-container");
+  const loadingSpinner = document.getElementById("loading-spinner");
+  const genText = document.getElementById("generatedText");
+
+  generateButton.addEventListener("click", function () {
+    const description = promptInput.value
+      ? encodeURIComponent(promptInput.value)
+      : "beautiful%20landscape";
+
+    imageContainer.innerHTML = ""; // Kosongkan kontainer gambar
+    loadingSpinner.style.display = "block";
+    genText.style.display = "none";
+    generateButton.disabled = true;
+
+    // Fungsi untuk membuat URL gambar
+    const generateImageUrl = (seed) =>
+      `https://image.pollinations.ai/prompt/${description}?nologo=1&seed=${seed}`;
+
+    const imageCount = 4; // Jumlah gambar yang dihasilkan
+    let imagesLoaded = 0; // Melacak jumlah gambar yang sudah dimuat
+
+    for (let i = 0; i < imageCount; i++) {
+      const randomSeed = Math.floor(Math.random() * 1000000000);
+      const imageUrl = generateImageUrl(randomSeed);
+      const image = document.createElement("img");
+      image.setAttribute("alt", "Generated Image");
+      image.style.width = "100%";
+      image.style.height = "auto";
+      image.style.cursor = "pointer";
+      image.style.border = "1px solid #ddd";
+      image.style.borderRadius = "8px";
+
+      image.onload = function () {
+        imagesLoaded++;
+        if (imagesLoaded === imageCount) {
+          loadingSpinner.style.display = "none";
+          genText.style.display = "block";
+          generateButton.disabled = false;
+        }
+      };
+
+      image.onerror = function () {
+        alert("Gagal memuat salah satu gambar. Silakan coba lagi.");
+        loadingSpinner.style.display = "none";
+        generateButton.disabled = false;
+      };
+
+      image.src = imageUrl;
+
+      image.addEventListener("click", function () {
+        window.open(imageUrl, "_blank");
+      });
+
+      imageContainer.appendChild(image);
+    }
+  });
+});
+</script>
+
+    </section>
+    
+    
+    
+ <section id="halaman1" class="content">
+      <h1>ASCII Art Generator</h1>
+        <p>Masukkan teks di bawah ini dan pilih gaya untuk mengubahnya menjadi ASCII art!</p>
+        <select class="form-control form-control-lg font-list"style="font-weight: bold;">
+        <option id="fancy">Select Text  ➞</option>
+        <option id="squared">🄰🄱🄲</option>
+        <option id="rounded">ⒶⒷⒸ</option>
+        <option id="full_square">🅰🅱🅲</option>
+       <option id="wingdings">Wingdings: 🕈︎♓︎■︎♑︎♎︎♓︎■︎♑︎⬧︎</option>
+   
+      <option id="fancy">𝙰𝙱𝙲</option>
+      <option id="gothic">𝔄𝔅ℭ</option>
+      <option id="gothic_bold">𝕬𝕭𝕮</option>
+      <option id="lined">𝔸𝔹ℂ</option>
+      <option id="very_tiny">ⱽᵉʳʸ ᵀⁱⁿʸ</option>
+      <option id="tiny">ᴛɪɴʏ</option>
+      <option id="bold">𝐀𝐁𝐂</option>
+      <option id="italic">𝘈𝘉𝘊</option>
+      <option id="bold_italic">𝘼𝘽𝘾</option>
+      <option id="underline">U̲n̲d̲e̲r̲l̲i̲n̲e̲</option>
+      <option id="cursive">𝒜ℬ𝒞</option>
+      <option id="cursive_bold">𝒜ℬ𝒞</option>
+      <option id="blade">ᗷᒪᗩᗪE</option>
+
+      <option id="fixed_width_symbols">𝙵𝚒𝚡𝚎𝚍 𝚆𝚒𝚍𝚝𝚑 𝚂𝚢𝚖𝚋𝚘𝚕𝚜</option>
+      <option id="sans_serif_symbols">𝖲𝖺𝗇𝗌-𝗌𝖾𝗋𝗂𝖿 𝖲𝗒𝗆𝖻𝗈𝗅𝗌</option>
+      <option id="bold_sans_serif_symbols">𝗕𝗼𝗹𝗱 𝗦𝗮𝗻𝘀-𝘀𝗲𝗿𝗶𝗳 𝗦𝘆𝗺𝗯𝗈𝗅𝘀</option>
+      <option id="bold_numbers">Numbers: 𝟏 𝟐 𝟑</option>
+      <option id="double_bar_numbers">Numbers: 𝟙 𝟚 𝟛</option>
+      <option id="numbers_sans_serif">Numbers: 𝟣 𝟤 𝟥</option>
+      <option id="bold_sans_serif_number">Number: 𝟭 𝟮 𝟯</option>
+      <option id="fixed_width_numbers">Numbers: 𝟷 𝟸 𝟹</option>
+      <option id="circled_numbers">Numbers: ① ② ③</option>
+    </select>
+ <!-- Input teks -->
+   <textarea class="form-control" id="NormalTextarea" placeholder="Tulis text…" 
+       style="width: 100%; height: 40px; font-size: 16px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 10px;"></textarea>
+    <textarea class="form-control" id="FancyTextarea" placeholder="Text…" 
+    style="width: 100%; height: 200px; font-size: 16px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+
+     <button onclick="copyText('FancyTextarea')" style="font-family: 'Orbitron', sans-serif; font-size: 12px; font-weight: bold; margin-top: -10px; background-color: #4CAF50; color: white; border: 2px solid #3e8e41; border-radius: 8px;">Copy </button>
+
+            
+<h2 style="font-family: 'Orbitron', sans-serif; font-size: 20px; padding-top: 5px; padding-bottom: 5px;">Scroll Bar</h2>
+
+
+<div id="content-container" style="
+  display: block; 
+  max-height: 500px; 
+  overflow-y: auto;"> 
+  
+<div class="button-wrapper">
+    <button class="customStyle" data-style="一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一" onclick="insertText(this)">一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一</button>
+    <button class="customStyle" data-style="﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌" onclick="insertText(this)">﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌</button>
+    <button class="customStyle" data-style="＿＿＿＿＿＿＿＿＿＿＿＿＿＿" onclick="insertText(this)">＿＿＿＿＿＿＿＿＿＿＿＿＿＿</button>
+    <button class="customStyle" data-style="ꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻ" onclick="insertText(this)">ꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻ</button>
+    <button class="customStyle" data-style="一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一" onclick="insertText(this)">一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一ꗴ一</button>
+    <button class="customStyle" data-style="﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌" onclick="insertText(this)">﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌</button>
+    <button class="customStyle" data-style="＿＿＿＿＿＿＿＿＿＿＿＿＿＿" onclick="insertText(this)">＿＿＿＿＿＿＿＿＿＿＿＿＿＿</button>
+    <button class="customStyle" data-style="ꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻ" onclick="insertText(this)">ꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻꣻ</button>
+
+  </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      
+      
+function insertText(button) {
+    var text = button.getAttribute("data-style");
+    var normalTextarea = document.getElementById("NormalTextarea");
+    var fancyTextarea = document.getElementById("FancyTextarea");
+    
+    insertAtCursor(normalTextarea, text);
+    
+    insertAtCursor(fancyTextarea, text);
+}
+
+function insertAtCursor(textarea, text) {
+    if (textarea.selectionStart || textarea.selectionStart === 0) {
+        var startPos = textarea.selectionStart;
+        var endPos = textarea.selectionEnd;
+        textarea.value = 
+            textarea.value.substring(0, startPos) + 
+            text + 
+            textarea.value.substring(endPos, textarea.value.length);
+        textarea.selectionStart = textarea.selectionEnd = startPos + text.length;
+        } else {
+        // Jika tidak ada dukungan untuk posisi kursor, tambahkan di akhir
+        textarea.value += text;
+          }
+            }
+
+        function copyText(elementId) {
+            var copyText = document.getElementById(elementId);
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+            document.execCommand("copy");
+                }
+      
+    function copyText(id) {
+        const textarea = document.getElementById(id);
+        textarea.select();
+        textarea.setSelectionRange(0, 99999); // Untuk kompatibilitas di perangkat seluler
+        document.execCommand("copy");
+        alert("Text copied: " + textarea.value);
+            }
+
+  String.prototype.fancy = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A":"𝙰","B":"𝙱","C":"𝙲","D":"𝙳","E":"𝙴","F":"𝙵","G":"𝙶","H":"𝙷","I":"𝙸","J":"𝙹","K":"𝙺","L":"𝙻","M":"𝙼","N":"𝙽","O":"𝙾","P":"𝙿","Q":"𝚀","R":"𝚁","S":"𝚂","T":"𝚃","U":"𝚄","V":"𝚅","W":"𝚆","X":"𝚇","Y":"𝚈","Z":"𝚉","a":"𝚊","b":"𝚋","c":"𝚌","d":"𝚍","e":"𝚎","f":"𝚏","g":"𝚐","h":"𝚑","i":"𝚒","j":"𝚓","k":"𝚔","l":"𝚕","m":"𝚖","n":"𝚗","o":"𝚘","p":"𝚙","q":"𝚚","r":"𝚛","s":"𝚜","t":"𝚝","u":"𝚞","v":"𝚟","w":"𝚠","x":"𝚡","y":"𝚢","z":"𝚣","1":"𝟷","2":"𝟸","3":"𝟹","4":"𝟺","5":"𝟻","6":"𝟼","7":"𝟽","8":"𝟾","9":"𝟿","0":"𝟶"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+      };
+
+    String.prototype.gothic = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A":"𝔄","B":"𝔅","C":"ℭ","D":"𝔇","E":"𝔈","F":"𝔉","G":"𝔊","H":"ℌ","I":"ℑ","J":"𝔍","K":"𝔎","L":"𝔏","M":"𝔐","N":"𝔑","O":"𝔒","P":"𝔓","Q":"𝔔","R":"ℜ","S":"𝔖","T":"𝔗","U":"𝔘","V":"𝔙","W":"𝔚","X":"𝔛","Y":"𝔜","Z":"ℨ","a":"𝔞","b":"𝔟","c":"𝔠","d":"𝔡","e":"𝔢","f":"𝔣","g":"𝔤","h":"𝔥","i":"𝔦","j":"𝔧","k":"𝔨","l":"𝔩","m":"𝔪","n":"𝔫","o":"𝔬","p":"𝔭","q":"𝔮","r":"𝔯","s":"𝔰","t":"𝔱","u":"𝔲","v":"𝔳","w":"𝔴","x":"𝔵","y":"𝔶","z":"𝔷","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9","0":"0"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+String.prototype.gothic_bold = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A":"𝕬","B":"𝕭","C":"𝕮","D":"𝕯","E":"𝕰","F":"𝕱","G":"𝕲","H":"𝕳","I":"𝕴","J":"𝕵","K":"𝕶","L":"𝕷","M":"𝕸","N":"𝕹","O":"𝕺","P":"𝕻","Q":"𝕼","R":"𝕽","S":"𝕾","T":"𝕿","U":"𝖀","V":"𝖁","W":"𝖂","X":"𝖃","Y":"𝖄","Z":"𝖅","a":"𝖆","b":"𝖇","c":"𝖈","d":"𝖉","e":"𝖊","f":"𝖋","g":"𝖌","h":"𝖍","i":"𝖎","j":"𝖏","k":"𝖐","l":"𝖑","m":"𝖒","n":"𝖓","o":"𝖔","p":"𝖕","q":"𝖖","r":"𝖗","s":"𝖘","t":"𝖙","u":"𝖚","v":"𝖛","w":"𝖜","x":"𝖝","y":"𝖞","z":"𝖟","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9","0":"0"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+String.prototype.lined = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A":"𝔸","B":"𝔹","C":"ℂ","D":"𝔻","E":"𝔼","F":"𝔽","G":"𝔾","H":"ℍ","I":"𝕀","J":"𝕁","K":"𝕂","L":"𝕃","M":"𝕄","N":"ℕ","O":"𝕆","P":"ℙ","Q":"ℚ","R":"ℝ","S":"𝕊","T":"𝕋","U":"𝕌","V":"𝕍","W":"𝕎","X":"𝕏","Y":"𝕐","Z":"ℤ","a":"𝕒","b":"𝕓","c":"𝕔","d":"𝕕","e":"𝕖","f":"𝕗","g":"𝕘","h":"𝕙","i":"𝕚","j":"𝕛","k":"𝕜","l":"𝕝","m":"𝕞","n":"𝕟","o":"𝕠","p":"𝕡","q":"𝕢","r":"𝕣","s":"𝕤","t":"𝕥","u":"𝕦","v":"𝕧","w":"𝕨","x":"𝕩","y":"𝕪","z":"𝕫","1":"𝟙","2":"𝟚","3":"𝟛","4":"𝟜","5":"𝟝","6":"𝟞","7":"𝟟","8":"𝟠","9":"𝟡","0":"𝟘"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+String.prototype.very_tiny = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A":"ᴬ","B":"ᴮ","C":"ᶜ","D":"ᴰ","E":"ᴱ","F":"ᶠ","G":"ᴳ","H":"ᴴ","I":"ᴵ","J":"ᴶ","K":"ᴷ","L":"ᴸ","M":"ᴹ","N":"ᴺ","O":"ᴼ","P":"ᴾ","Q":"Q","R":"ᴿ","S":"ˢ","T":"ᵀ","U":"ᵁ","V":"ⱽ","W":"ᵂ","X":"ˣ","Y":"ʸ","Z":"ᶻ","a":"ᵃ","b":"ᵇ","c":"ᶜ","d":"ᵈ","e":"ᵉ","f":"ᶠ","g":"ᵍ","h":"ʰ","i":"ⁱ","j":"ʲ","k":"ᵏ","l":"ˡ","m":"ᵐ","n":"ⁿ","o":"ᵒ","p":"ᵖ","q":"q","r":"ʳ","s":"ˢ","t":"ᵗ","u":"ᵘ","v":"ᵛ","w":"ʷ","x":"ˣ","y":"ʸ","z":"ᶻ","1":"¹","2":"²","3":"³","4":"⁴","5":"⁵","6":"⁶","7":"⁷","8":"⁸","9":"⁹","0":"⁰"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+String.prototype.tiny = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A":"ᴀ","B":"ʙ","C":"ᴄ","D":"ᴅ","E":"ᴇ","F":"ꜰ","G":"ɢ","H":"ʜ","I":"ɪ","J":"ᴊ","K":"ᴋ","L":"ʟ","M":"ᴍ","N":"ɴ","O":"ᴏ","P":"ᴘ","Q":"Q","R":"ʀ","S":"ꜱ","T":"ᴛ","U":"ᴜ","V":"ᴠ","W":"ᴡ","X":"x","Y":"ʏ","Z":"ᴢ","a":"ᴀ","b":"ʙ","c":"ᴄ","d":"ᴅ","e":"ᴇ","f":"ꜰ","g":"ɢ","h":"ʜ","i":"ɪ","j":"ᴊ","k":"ᴋ","l":"ʟ","m":"ᴍ","n":"ɴ","o":"ᴏ","p":"ᴘ","q":"Q","r":"ʀ","s":"ꜱ","t":"ᴛ","u":"ᴜ","v":"ᴠ","w":"ᴡ","x":"x","y":"ʏ","z":"ᴢ","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9","0":"0"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+String.prototype.bold = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A":"𝐀","B":"𝐁","C":"𝐂","D":"𝐃","E":"𝐄","F":"𝐅","G":"𝐆","H":"𝐇","I":"𝐈","J":"𝐉","K":"𝐊","L":"𝐋","M":"𝐌","N":"𝐍","O":"𝐎","P":"𝐏","Q":"𝐐","R":"𝐑","S":"𝐒","T":"𝐓","U":"𝐔","V":"𝐕","W":"𝐖","X":"𝐗","Y":"𝐘","Z":"𝐙","a":"𝐚","b":"𝐛","c":"𝐜","d":"𝐝","e":"𝐞","f":"𝐟","g":"𝐠","h":"𝐡","i":"𝐢","j":"𝐣","k":"𝐤","l":"𝐥","m":"𝐦","n":"𝐧","o":"𝐨","p":"𝐩","q":"𝐪","r":"𝐫","s":"𝐬","t":"𝐭","u":"𝐮","v":"𝐯","w":"𝐰","x":"𝐱","y":"𝐲","z":"𝐳","1":"𝟏","2":"𝟐","3":"𝟑","4":"𝟒","5":"𝟓","6":"𝟔","7":"𝟕","8":"𝟖","9":"𝟗","0":"𝟎"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+String.prototype.italic = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A":"𝘈","B":"𝘉","C":"𝘊","D":"𝘋","E":"𝘌","F":"𝘍","G":"𝘎","H":"𝘏","I":"𝘐","J":"𝘑","K":"𝘒","L":"𝘓","M":"𝘔","N":"𝘕","O":"𝘖","P":"𝘗","Q":"𝘘","R":"𝘙","S":"𝘚","T":"𝘛","U":"𝘜","V":"𝘝","W":"𝘞","X":"𝘟","Y":"𝘠","Z":"𝘡","a":"𝘢","b":"𝘣","c":"𝘤","d":"𝘥","e":"𝘦","f":"𝘧","g":"𝘨","h":"𝘩","i":"𝘪","j":"𝘫","k":"𝘬","l":"𝘭","m":"𝘮","n":"𝘯","o":"𝘰","p":"𝘱","q":"𝘲","r":"𝘳","s":"𝘴","t":"𝘵","u":"𝘶","v":"𝘷","w":"𝘸","x":"𝘹","y":"𝘺","z":"𝘻","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9","0":"0"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+String.prototype.bold_italic = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A":"𝘼","B":"𝘽","C":"𝘾","D":"𝘿","E":"𝙀","F":"𝙁","G":"𝙂","H":"𝙃","I":"𝙄","J":"𝙅","K":"𝙆","L":"𝙇","M":"𝙈","N":"𝙉","O":"𝙊","P":"𝙋","Q":"𝙌","R":"𝙍","S":"𝙎","T":"𝙏","U":"𝙐","V":"𝙑","W":"𝙒","X":"𝙓","Y":"𝙔","Z":"𝙕","a":"𝙖","b":"𝙗","c":"𝙘","d":"𝙙","e":"𝙚","f":"𝙛","g":"𝙜","h":"𝙝","i":"𝙞","j":"𝙟","k":"𝙠","l":"𝙡","m":"𝙢","n":"𝙣","o":"𝙤","p":"𝙥","q":"𝙦","r":"𝙧","s":"𝙨","t":"𝙩","u":"𝙪","v":"𝙫","w":"𝙬","x":"𝙭","y":"𝙮","z":"𝙯","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9","0":"0"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+String.prototype.underline = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 ]/g;
+    var translate = {"A":"A̲","B":"B̲","C":"C̲","D":"D̲","E":"E̲","F":"F̲","G":"G̲","H":"H̲","I":"I̲","J":"J̲","K":"K̲","L":"L̲","M":"M̲","N":"N̲","O":"O̲","P":"P̲","Q":"Q̲","R":"R̲","S":"S̲","T":"T̲","U":"U̲","V":"V̲","W":"W̲","X":"X̲","Y":"Y̲","Z":"Z̲","a":"a̲","b":"b̲","c":"c̲","d":"d̲","e":"e̲","f":"f̲","g":"g̲","h":"h̲","i":"i̲","j":"j̲","k":"k̲","l":"l̲","m":"m̲","n":"n̲","o":"o̲","p":"p̲","q":"q̲","r":"r̲","s":"s̲","t":"t̲","u":"u̲","v":"v̲","w":"w̲","x":"x̲","y":"y̲","z":"z̲","1":"1̲","2":"2̲","3":"3̲","4":"4̲","5":"5̲","6":"6̲","7":"7̲","8":"8̲","9":"9̲","0":"0̲", " ":" ̲"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+String.prototype.cursive = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A":"𝒜","B":"𝐵","C":"𝒞","D":"𝒟","E":"𝐸","F":"𝐹","G":"𝒢","H":"𝐻","I":"𝐼","J":"𝒥","K":"𝒦","L":"𝐿","M":"𝑀","N":"𝒩","O":"𝒪","P":"𝒫","Q":"𝒬","R":"𝑅","S":"𝒮","T":"𝒯","U":"𝒰","V":"𝒱","W":"𝒲","X":"𝒳","Y":"𝒴","Z":"𝒵","a":"𝒶","b":"𝒷","c":"𝒸","d":"𝒹","e":"𝑒","f":"𝒻","g":"𝑔","h":"𝒽","i":"𝒾","j":"𝒿","k":"𝓀","l":"𝓁","m":"𝓂","n":"𝓃","o":"𝑜","p":"𝓅","q":"𝓆","r":"𝓇","s":"𝓈","t":"𝓉","u":"𝓊","v":"𝓋","w":"𝓌","x":"𝓍","y":"𝓎","z":"𝓏","1":"𝟣","2":"𝟤","3":"𝟥","4":"𝟦","5":"𝟧","6":"𝟨","7":"𝟩","8":"𝟪","9":"𝟫","0":"𝟢"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+String.prototype.cursive_bold = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A":"𝓐","B":"𝓑","C":"𝓒","D":"𝓓","E":"𝓔","F":"𝓕","G":"𝓖","H":"𝓗","I":"𝓘","J":"𝓙","K":"𝓚","L":"𝓛","M":"𝓜","N":"𝓝","O":"𝓞","P":"𝓟","Q":"𝓠","R":"𝓡","S":"𝓢","T":"𝓣","U":"𝓤","V":"𝓥","W":"𝓦","X":"𝓧","Y":"𝓨","Z":"𝓩","a":"𝓪","b":"𝓫","c":"𝓬","d":"𝓭","e":"𝓮","f":"𝓯","g":"𝓰","h":"𝓱","i":"𝓲","j":"𝓳","k":"𝓴","l":"𝓵","m":"𝓶","n":"𝓷","o":"𝓸","p":"𝓹","q":"𝓺","r":"𝓻","s":"𝓼","t":"𝓽","u":"𝓾","v":"𝓿","w":"𝔀","x":"𝔁","y":"𝔂","z":"𝔃","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9","0":"0"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+String.prototype.blade = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A":"ᗩ","B":"ᗷ","C":"ᑕ","D":"ᗪ","E":"E","F":"ᖴ","G":"G","H":"ᕼ","I":"I","J":"ᒍ","K":"K","L":"ᒪ","M":"ᗰ","N":"ᑎ","O":"O","P":"ᑭ","Q":"ᑫ","R":"ᖇ","S":"ᔕ","T":"T","U":"ᑌ","V":"ᐯ","W":"ᗯ","X":"᙭","Y":"Y","Z":"ᘔ","a":"ᗩ","b":"ᗷ","c":"ᑕ","d":"ᗪ","e":"E","f":"ᖴ","g":"G","h":"ᕼ","i":"I","j":"ᒍ","k":"K","l":"ᒪ","m":"ᗰ","n":"ᑎ","o":"O","p":"ᑭ","q":"ᑫ","r":"ᖇ","s":"ᔕ","t":"T","u":"ᑌ","v":"ᐯ","w":"ᗯ","x":"᙭","y":"Y","z":"ᘔ","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9","0":"0"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+String.prototype.squared = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A":"🄰","B":"🄱","C":"🄲","D":"🄳","E":"🄴","F":"🄵","G":"🄶","H":"🄷","I":"🄸","J":"🄹","K":"🄺","L":"🄻","M":"🄼","N":"🄽","O":"🄾","P":"🄿","Q":"🅀","R":"🅁","S":"🅂","T":"🅃","U":"🅄","V":"🅅","W":"🅆","X":"🅇","Y":"🅈","Z":"🅉","a":"🄰","b":"🄱","c":"🄲","d":"🄳","e":"🄴","f":"🄵","g":"🄶","h":"🄷","i":"🄸","j":"🄹","k":"🄺","l":"🄻","m":"🄼","n":"🄽","o":"🄾","p":"🄿","q":"🅀","r":"🅁","s":"🅂","t":"🅃","u":"🅄","v":"🅅","w":"🅆","x":"🅇","y":"🅈","z":"🅉","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9","0":"0"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+String.prototype.rounded = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A":"Ⓐ","B":"Ⓑ","C":"Ⓒ","D":"Ⓓ","E":"Ⓔ","F":"Ⓕ","G":"Ⓖ","H":"Ⓗ","I":"Ⓘ","J":"Ⓙ","K":"Ⓚ","L":"Ⓛ","M":"Ⓜ","N":"Ⓝ","O":"Ⓞ","P":"Ⓟ","Q":"Ⓠ","R":"Ⓡ","S":"Ⓢ","T":"Ⓣ","U":"Ⓤ","V":"Ⓥ","W":"Ⓦ","X":"Ⓧ","Y":"Ⓨ","Z":"Ⓩ","a":"ⓐ","b":"ⓑ","c":"ⓒ","d":"ⓓ","e":"ⓔ","f":"ⓕ","g":"ⓖ","h":"ⓗ","i":"ⓘ","j":"ⓙ","k":"ⓚ","l":"ⓛ","m":"ⓜ","n":"ⓝ","o":"ⓞ","p":"ⓟ","q":"ⓠ","r":"ⓡ","s":"ⓢ","t":"ⓣ","u":"ⓤ","v":"ⓥ","w":"ⓦ","x":"ⓧ","y":"ⓨ","z":"ⓩ","1":"①","2":"②","3":"③","4":"④","5":"⑤","6":"⑥","7":"⑦","8":"⑧","9":"⑨","0":"⓪"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+String.prototype.full_square = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A":"🅰","B":"🅱","C":"🅲","D":"🅳","E":"🅴","F":"🅵","G":"🅶","H":"🅷","I":"🅸","J":"🅹","K":"🅺","L":"🅻","M":"🅼","N":"🅽","O":"🅾","P":"🅿","Q":"🆀","R":"🆁","S":"🆂","T":"🆃","U":"🆄","V":"🆅","W":"🆆","X":"🆇","Y":"🆈","Z":"🆉","a":"🅰","b":"🅱","c":"🅲","d":"🅳","e":"🅴","f":"🅵","g":"🅶","h":"🅷","i":"🅸","j":"🅹","k":"🅺","l":"🅻","m":"🅼","n":"🅽","o":"🅾","p":"🅿","q":"🆀","r":"🆁","s":"🆂","t":"🆃","u":"🆄","v":"🆅","w":"🆆","x":"🆇","y":"🆈","z":"🆉","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9","0":"0"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+String.prototype.wingdings = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A":"✌︎","B":"👌︎","C":"👍︎","D":"👎︎","E":"☜︎","F":"☞︎","G":"☝︎","H":"☟︎","I":"✋︎","J":"☺︎","K":"😐︎","L":"☹︎","M":"💣︎","N":"☠︎","O":"⚐︎","P":"🏱︎","Q":"✈︎","R":"☼︎","S":"💧︎","T":"❄︎","U":"🕆︎","V":"✞︎","W":"🕈︎","X":"✠︎","Y":"✡︎","Z":"☪︎","a":"♋︎","b":"♌︎","c":"♍︎","d":"♎︎","e":"♏︎","f":"♐︎","g":"♑︎","h":"♒︎","i":"♓︎","j":"🙰","k":"🙵","l":"●︎","m":"❍︎","n":"■︎","o":"□︎","p":"◻︎","q":"❑︎","r":"❒︎","s":"⬧︎","t":"⧫︎","u":"◆︎","v":"❖︎","w":"⬥︎","x":"⌧︎","y":"⍓︎","z":"⌘︎","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9","0":"0"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+
+String.prototype.fixed_width_symbols = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A": "𝙰","B": "𝙱","C": "𝙲","D": "𝙳","E": "𝙴","F": "𝙵","G": "𝙶","H": "𝙷","I": "𝙸","J": "𝙹","K": "𝙺","L": "𝙻","M": "𝙼","N": "𝙽","O": "𝙾","P": "𝙿","Q": "𝚀","R": "𝚁","S": "𝚂","T": "𝚃","U": "𝚄","V": "𝚅","W": "𝚆","X": "𝚇","Y": "𝚈","Z": "𝚉","a": "𝚊","b": "𝚋","c": "𝚌","d": "𝚍","e": "𝚎","f": "𝚏","g": "𝚐","h": "𝚑","i": "𝚒","j": "𝚓","k": "𝚔","l": "𝚕","m": "𝚖","n": "𝚗","o": "𝚘","p": "𝚙","q": "𝚚","r": "𝚛","s": "𝚜","t": "𝚝","u": "𝚞","v": "𝚟","w": "𝚠","x": "𝚡","y": "𝚢","z": "𝚣","1": "1","2": "2","3": "3","4": "4","5": "5","6": "6","7": "7","8": "8","9": "9","0": "0"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+
+String.prototype.sans_serif_symbols = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A": "𝖠","B": "𝖡","C": "𝖢","D": "𝖣","E": "𝖤","F": "𝖥","G": "𝖦","H": "𝖧","I": "𝖨","J": "𝖩","K": "𝖪","L": "𝖫","M": "𝖬","N": "𝖭","O": "𝖮","P": "𝖯","Q": "𝖰","R": "𝖱","S": "𝖲","T": "𝖳","U": "𝖴","V": "𝖵","W": "𝖶","X": "𝖷","Y": "𝖸","Z": "𝖹","a": "𝖺","b": "𝖻","c": "𝖼","d": "𝖽","e": "𝖾","f": "𝖿","g": "𝗀","h": "𝗁","i": "𝗂","j": "𝗃","k": "𝗄","l": "𝗅","m": "𝗆","n": "𝗇","o": "𝗈","p": "𝗉","q": "𝗊","r": "𝗋","s": "𝗌","t": "𝗍","u": "𝗎","v": "𝗏","w": "𝗐","x": "𝗑","y": "𝗒","z": "𝗓","1": "1","2": "2","3": "3","4": "4","5": "5","6": "6","7": "7","8": "8","9": "9","0": "0"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+
+String.prototype.bold_sans_serif_symbols = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A": "𝗔","B": "𝗕","C": "𝗖","D": "𝗗","E": "𝗘","F": "𝗙","G": "𝗚","H": "𝗛","I": "𝗜","J": "𝗝","K": "𝗞","L": "𝗟","M": "𝗠","N": "𝗡","O": "𝗢","P": "𝗣","Q": "𝗤","R": "𝗥","S": "𝗦","T": "𝗧","U": "𝗨","V": "𝗩","W": "𝗪","X": "𝗫","Y": "𝗬","Z": "𝗭","a": "𝗮","b": "𝗯","c": "𝗰","d": "𝗱","e": "𝗲","f": "𝗳","g": "𝗴","h": "𝗵","i": "𝗶","j": "𝗷","k": "𝗸","l": "𝗹","m": "𝗺","n": "𝗻","o": "𝗼","p": "𝗽","q": "𝗾","r": "𝗿","s": "𝘀","t": "𝘁","u": "𝘂","v": "𝘃","w": "𝘄","x": "𝘅","y": "𝘆","z": "𝘇","1": "1","2": "2","3": "3","4": "4","5": "5","6": "6","7": "7","8": "8","9": "9","0": "0"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+
+String.prototype.bold_numbers = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A": "A","B": "B","C": "C","D": "D","E": "E","F": "F","G": "G","H": "H","I": "I","J": "J","K": "K","L": "L","M": "M","N": "N","O": "O","P": "P","Q": "Q","R": "R","S": "S","T": "T","U": "U","V": "V","W": "W","X": "X","Y": "Y","Z": "Z","a": "a","b": "b","c": "c","d": "d","e": "e","f": "f","g": "g","h": "h","i": "i","j": "j","k": "k","l": "l","m": "m","n": "n","o": "o","p": "p","q": "q","r": "r","s": "s","t": "t","u": "u","v": "v","w": "w","x": "x","y": "y","z": "z","1": "𝟏","2": "𝟐","3": "𝟑","4": "𝟒","5": "𝟓","6": "𝟔","7": "𝟕","8": "𝟖","9": "𝟗","0": "𝟎"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+
+String.prototype.double_bar_numbers = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A": "A","B": "B","C": "C","D": "D","E": "E","F": "F","G": "G","H": "H","I": "I","J": "J","K": "K","L": "L","M": "M","N": "N","O": "O","P": "P","Q": "Q","R": "R","S": "S","T": "T","U": "U","V": "V","W": "W","X": "X","Y": "Y","Z": "Z","a": "a","b": "b","c": "c","d": "d","e": "e","f": "f","g": "g","h": "h","i": "i","j": "j","k": "k","l": "l","m": "m","n": "n","o": "o","p": "p","q": "q","r": "r","s": "s","t": "t","u": "u","v": "v","w": "w","x": "x","y": "y","z": "z","1": "𝟙","2": "𝟚","3": "𝟛","4": "𝟜","5": "𝟝","6": "𝟞","7": "𝟟","8": "𝟠","9": "𝟡","0": "𝟘"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+
+String.prototype.numbers_sans_serif = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A": "A","B": "B","C": "C","D": "D","E": "E","F": "F","G": "G","H": "H","I": "I","J": "J","K": "K","L": "L","M": "M","N": "N","O": "O","P": "P","Q": "Q","R": "R","S": "S","T": "T","U": "U","V": "V","W": "W","X": "X","Y": "Y","Z": "Z","a": "a","b": "b","c": "c","d": "d","e": "e","f": "f","g": "g","h": "h","i": "i","j": "j","k": "k","l": "l","m": "m","n": "n","o": "o","p": "p","q": "q","r": "r","s": "s","t": "t","u": "u","v": "v","w": "w","x": "x","y": "y","z": "z","1": "𝟣","2": "𝟤","3": "𝟥","4": "𝟦","5": "𝟧","6": "𝟨","7": "𝟩","8": "𝟪","9": "𝟫","0": "𝟢"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+
+String.prototype.bold_sans_serif_number = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A": "A","B": "B","C": "C","D": "D","E": "E","F": "F","G": "G","H": "H","I": "I","J": "J","K": "K","L": "L","M": "M","N": "N","O": "O","P": "P","Q": "Q","R": "R","S": "S","T": "T","U": "U","V": "V","W": "W","X": "X","Y": "Y","Z": "Z","a": "a","b": "b","c": "c","d": "d","e": "e","f": "f","g": "g","h": "h","i": "i","j": "j","k": "k","l": "l","m": "m","n": "n","o": "o","p": "p","q": "q","r": "r","s": "s","t": "t","u": "u","v": "v","w": "w","x": "x","y": "y","z": "z","1": "𝟭","2": "𝟮","3": "𝟯","4": "𝟰","5": "𝟱","6": "𝟲","7": "𝟳","8": "𝟴","9": "𝟵","0": "𝟬"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+
+String.prototype.fixed_width_numbers = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A": "A","B": "B","C": "C","D": "D","E": "E","F": "F","G": "G","H": "H","I": "I","J": "J","K": "K","L": "L","M": "M","N": "N","O": "O","P": "P","Q": "Q","R": "R","S": "S","T": "T","U": "U","V": "V","W": "W","X": "X","Y": "Y","Z": "Z","a": "a","b": "b","c": "c","d": "d","e": "e","f": "f","g": "g","h": "h","i": "i","j": "j","k": "k","l": "l","m": "m","n": "n","o": "o","p": "p","q": "q","r": "r","s": "s","t": "t","u": "u","v": "v","w": "w","x": "x","y": "y","z": "z","1": "𝟷","2": "𝟸","3": "𝟹","4": "𝟺","5": "𝟻","6": "𝟼","7": "𝟽","8": "𝟾","9": "𝟿","0": "𝟶"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+
+String.prototype.circled_numbers = function() {
+    var translate_re = /[ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890]/g;
+    var translate = {"A": "A","B": "B","C": "C","D": "D","E": "E","F": "F","G": "G","H": "H","I": "I","J": "J","K": "K","L": "L","M": "M","N": "N","O": "O","P": "P","Q": "Q","R": "R","S": "S","T": "T","U": "U","V": "V","W": "W","X": "X","Y": "Y","Z": "Z","a": "a","b": "b","c": "c","d": "d","e": "e","f": "f","g": "g","h": "h","i": "i","j": "j","k": "k","l": "l","m": "m","n": "n","o": "o","p": "p","q": "q","r": "r","s": "s","t": "t","u": "u","v": "v","w": "w","x": "x","y": "y","z": "z","1": "①","2": "②","3": "③","4": "④","5": "⑤","6": "⑥","7": "⑦","8": "⑧","9": "⑨","0": "⑩"};
+
+    return (this.replace(translate_re, function(match){
+        return translate[match];})
+    );
+};
+
+
+
+
+$('textarea#NormalTextarea').bind('input propertychange', function() {
+    var normal = this.value;
+    var font_selected = $(".font-list").children(":selected").attr("id");
+
+    if (font_selected === "fancy") {
+        $("textarea#FancyTextarea").val(normal.fancy())
+    } else if (font_selected === "gothic"){
+        $("textarea#FancyTextarea").val(normal.gothic())
+    } else if (font_selected === "gothic_bold"){
+        $("textarea#FancyTextarea").val(normal.gothic_bold())
+    } else if (font_selected === "lined"){
+        $("textarea#FancyTextarea").val(normal.lined())
+    } else if (font_selected === "very_tiny"){
+        $("textarea#FancyTextarea").val(normal.very_tiny())
+    } else if (font_selected === "tiny"){
+        $("textarea#FancyTextarea").val(normal.tiny())
+    } else if (font_selected === "bold"){
+        $("textarea#FancyTextarea").val(normal.bold())
+    } else if (font_selected === "italic"){
+        $("textarea#FancyTextarea").val(normal.italic())
+    } else if (font_selected === "bold_italic"){
+        $("textarea#FancyTextarea").val(normal.bold_italic())
+    } else if (font_selected === "underline"){
+        $("textarea#FancyTextarea").val(normal.underline())
+    } else if (font_selected === "cursive"){
+        $("textarea#FancyTextarea").val(normal.cursive())
+    } else if (font_selected === "cursive_bold"){
+        $("textarea#FancyTextarea").val(normal.cursive_bold())
+    } else if (font_selected === "blade"){
+        $("textarea#FancyTextarea").val(normal.blade())
+    } else if (font_selected === "squared"){
+        $("textarea#FancyTextarea").val(normal.squared())
+    } else if (font_selected === "rounded"){
+        $("textarea#FancyTextarea").val(normal.rounded())
+    } else if (font_selected === "full_square"){
+        $("textarea#FancyTextarea").val(normal.full_square())
+    } else if (font_selected === "wingdings"){
+        $("textarea#FancyTextarea").val(normal.wingdings())
+    } else if (font_selected === "fixed_width_symbols"){
+        $("textarea#FancyTextarea").val(normal.fixed_width_symbols())
+    } else if (font_selected === "sans_serif_symbols"){
+        $("textarea#FancyTextarea").val(normal.sans_serif_symbols())
+    } else if (font_selected === "bold_sans_serif_symbols"){
+        $("textarea#FancyTextarea").val(normal.bold_sans_serif_symbols())
+    } else if (font_selected === "bold_numbers"){
+        $("textarea#FancyTextarea").val(normal.bold_numbers())
+    } else if (font_selected === "double_bar_numbers"){
+        $("textarea#FancyTextarea").val(normal.double_bar_numbers())
+    } else if (font_selected === "numbers_sans_serif"){
+        $("textarea#FancyTextarea").val(normal.numbers_sans_serif())
+    } else if (font_selected === "bold_sans_serif_number"){
+        $("textarea#FancyTextarea").val(normal.bold_sans_serif_number())
+    } else if (font_selected === "fixed_width_numbers"){
+        $("textarea#FancyTextarea").val(normal.fixed_width_numbers())
+    } else if (font_selected === "circled_numbers"){
+        $("textarea#FancyTextarea").val(normal.circled_numbers())
+    } else {
+        $("textarea#FancyTextarea").val(normal)
+    }
+});
+
+$(".font-list").change(function() {
+    var normal = $('textarea#NormalTextarea').val();
+    var font_selected = $(".font-list").children(":selected").attr("id");
+
+    if (font_selected === "fancy") {
+        $("textarea#FancyTextarea").val(normal.fancy())
+    } else if (font_selected === "gothic"){
+        $("textarea#FancyTextarea").val(normal.gothic())
+    } else if (font_selected === "gothic_bold"){
+        $("textarea#FancyTextarea").val(normal.gothic_bold())
+    } else if (font_selected === "lined"){
+        $("textarea#FancyTextarea").val(normal.lined())
+    } else if (font_selected === "very_tiny"){
+        $("textarea#FancyTextarea").val(normal.very_tiny())
+    } else if (font_selected === "tiny"){
+        $("textarea#FancyTextarea").val(normal.tiny())
+    } else if (font_selected === "bold"){
+        $("textarea#FancyTextarea").val(normal.bold())
+    } else if (font_selected === "italic"){
+        $("textarea#FancyTextarea").val(normal.italic())
+    } else if (font_selected === "bold_italic"){
+        $("textarea#FancyTextarea").val(normal.bold_italic())
+    } else if (font_selected === "underline"){
+        $("textarea#FancyTextarea").val(normal.underline())
+    } else if (font_selected === "cursive"){
+        $("textarea#FancyTextarea").val(normal.cursive())
+    } else if (font_selected === "cursive_bold"){
+        $("textarea#FancyTextarea").val(normal.cursive_bold())
+    } else if (font_selected === "blade"){
+        $("textarea#FancyTextarea").val(normal.blade())
+    } else if (font_selected === "squared"){
+        $("textarea#FancyTextarea").val(normal.squared())
+    } else if (font_selected === "rounded"){
+        $("textarea#FancyTextarea").val(normal.rounded())
+    } else if (font_selected === "full_square"){
+        $("textarea#FancyTextarea").val(normal.full_square())
+    } else if (font_selected === "wingdings"){
+        $("textarea#FancyTextarea").val(normal.wingdings())
+    } else if (font_selected === "fixed_width_symbols"){
+        $("textarea#FancyTextarea").val(normal.fixed_width_symbols())
+    } else if (font_selected === "sans_serif_symbols"){
+        $("textarea#FancyTextarea").val(normal.sans_serif_symbols())
+    } else if (font_selected === "bold_sans_serif_symbols"){
+        $("textarea#FancyTextarea").val(normal.bold_sans_serif_symbols())
+    } else if (font_selected === "bold_numbers"){
+        $("textarea#FancyTextarea").val(normal.bold_numbers())
+    } else if (font_selected === "double_bar_numbers"){
+        $("textarea#FancyTextarea").val(normal.double_bar_numbers())
+    } else if (font_selected === "numbers_sans_serif"){
+        $("textarea#FancyTextarea").val(normal.numbers_sans_serif())
+    } else if (font_selected === "bold_sans_serif_number"){
+        $("textarea#FancyTextarea").val(normal.bold_sans_serif_number())
+    } else if (font_selected === "fixed_width_numbers"){
+        $("textarea#FancyTextarea").val(normal.fixed_width_numbers())
+    } else if (font_selected === "circled_numbers"){
+        $("textarea#FancyTextarea").val(normal.circled_numbers())
+    } else {
+        $("textarea#FancyTextarea").val(normal)
+    }
+});
+
+        // **Navigasi Halaman**
+        function navigateTo(url) {
+            window.location.href = url; // Arahkan ke URL tujuan
+        }
+
+    </script>
+</section>
+
+
+
+<section id="halaman2" class="content">
+    <h1>ASCII Art image</h1>
+    <p>Tambahkan teman baru dari halaman ini.</p>
+
+    <pre id="ascii-output"></pre>
+    <input type="file" id="image-input" accept="image/*" />
+    <canvas id="canvas" style="display:none;"></canvas>
+
+    <!-- Checkbox untuk pewarnaan -->
+    <div class="checkbox-container">
+        <label>
+            <input type="checkbox" id="colorize-toggle" />   ◀ Colorize
+        </label>
+    </div>
+    <!-- Slider untuk mengatur tinggi -->
+    <div class="slider-container">
+        <div class="slider-label">
+            <label for="height-slider">Height: <span id="height-value">50%</span></label>
+        </div>
+        <button class="slider-button" onclick="adjustSlider('height-slider', -5)">-</button>
+        <input type="range" id="height-slider" min="1" max="100" value="50" oninput="updateASCII()" />
+        <button class="slider-button" onclick="adjustSlider('height-slider', 5)">+</button>
+    </div>
+  <!-- Slider untuk mengatur lebar -->
+    <div class="slider-container">
+        <div class="slider-label">
+            <label for="width-slider">Width: <span id="width-value">50%</span></label>
+        </div>
+        
+        <button class="slider-button" onclick="adjustSlider('width-slider', -5)">-</button>
+        <input type="range" id="width-slider" min="1" max="100" value="50" oninput="updateASCII()" />
+        <button class="slider-button" onclick="adjustSlider('width-slider', 5)">+</button>
+    </div>
+    
+    <!-- Slider untuk mengatur skala -->
+    <div class="slider-container">
+        <div class="slider-label">
+            <label for="scale-slider">Scale: <span id="scale-value">50%</span></label>
+        </div>
+        <button class="slider-button" onclick="adjustSlider('scale-slider', -5)">-</button>
+        <input type="range" id="scale-slider" min="50" max="200" value="50" oninput="updateASCII()" />
+        <button class="slider-button" onclick="adjustSlider('scale-slider', 5)">+</button>
+    </div>
+
+    <p>Klik generate dan atur ukuran</p>
+    
+    <button onclick="generateASCII()">Generate</button>
+    <button class="copy-button" onclick="copyText()">Copy</button>
+    <button onclick="takeScreenshot()">Save</button>
+</section>
+
+
+
+ <script>
+const asciiChars = "@%#*+=-:. ";
+
+function adjustSlider(sliderId, change) {
+    const slider = document.getElementById(sliderId);
+    let newValue = parseInt(slider.value) + change;
+    if (newValue >= slider.min && newValue <= slider.max) {
+        slider.value = newValue;
+        document.getElementById(sliderId === 'width-slider' ? 'width-value' : sliderId === 'height-slider' ? 'height-value' : 'scale-value').textContent = newValue + "%";
+        updateASCII();
+    }
+}
+
+function updateASCII() {
+    const fileInput = document.getElementById('image-input').files[0];
+    if (!fileInput) {
+        alert("Please upload an image first.");
+        return;
+    }
+
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    const asciiOutput = document.getElementById('ascii-output');
+    const img = new Image();
+    img.src = URL.createObjectURL(fileInput);
+
+    img.onload = () => {
+        const widthPercent = document.getElementById('width-slider').value;
+        const heightPercent = document.getElementById('height-slider').value;
+        const scaleValue = document.getElementById('scale-slider').value;
+
+        const originalWidth = img.width;
+        const originalHeight = img.height;
+        const aspectRatio = originalWidth / originalHeight;
+
+        const width = Math.floor((widthPercent / 100) * 150); // Sesuaikan dengan CSS width
+        const height = Math.floor((heightPercent / 100) * 900); // Sesuaikan dengan CSS height
+
+        canvas.width = width;
+        canvas.height = height;
+
+        ctx.drawImage(img, 0, 0, width, height);
+
+        const imgData = ctx.getImageData(0, 0, width, height);
+        const pixels = imgData.data;
+        let asciiArt = '';
+
+        for (let y = 0; y < height; y++) {
+            for (let x = 0; x < width; x++) {
+                const idx = (y * width + x) * 4;
+                const r = pixels[idx];
+                const g = pixels[idx + 1];
+                const b = pixels[idx + 2];
+                const a = pixels[idx + 3];
+
+                if (a === 0) {
+                    asciiArt += ' '; // Gunakan spasi untuk piksel transparan
+                } else {
+                    const brightness = (r + g + b) / 3; // Menghitung kecerahan
+                    const charIndex = Math.floor((brightness / 255) * (asciiChars.length - 1));
+                    asciiArt += asciiChars[charIndex];
+                }
+            }
+            asciiArt += '\n';
+        }
+
+        asciiOutput.textContent = asciiArt;
+        asciiOutput.style.fontSize = `${scaleValue / 200}em`; // Mengatur ukuran font berdasarkan slider skala
+    };
+}
+
+function copyText() {
+    const asciiOutput = document.getElementById('ascii-output');
+    navigator.clipboard.writeText(asciiOutput.innerText)
+        .then(() => alert("ASCII art copied to clipboard!"))
+        .catch(err => console.error('Error copying text: ', err));
+}
+
+function takeScreenshot() {
+    const asciiOutput = document.getElementById('ascii-output');
+    const fontSize = parseInt(window.getComputedStyle(asciiOutput).fontSize);
+    const lineHeight = fontSize * 0.1;
+    const asciiLines = asciiOutput.textContent.split('\n');
+
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    const canvasWidth = asciiOutput.offsetWidth;
+    const canvasHeight = asciiLines.length * lineHeight;
+
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
+
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.font = `${fontSize}px monospace`;
+    ctx.fillStyle = 'black';
+    ctx.textBaseline = 'top';
+
+    asciiLines.forEach((line, index) => {
+        ctx.fillText(line, 0, index * lineHeight);
+    });
+
+    const link = document.createElement('a');
+    link.download = 'ascii_art.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+}
+
+</script>
+
+
+
+  <section id="halaman3" class="content">
+    <h1 style="font-size: 18px; margin-top: -17px; font-family: 'Orbitron', sans-serif; margin-left: -7px;">ID card</h1>
+
+      <p style="font-size: 12px; margin-left: -9px;">Kelola pesan Anda di sini.</p>
+        
+          <div class="ktp-container" style="padding: 12px;">
+        <h2>PROVINSI DKI JAKARTA</h2>
+        <h3>JAKARTA BARAT</h3>
+        <div class="ktp-content">
+            <div class="ktp-left" style="font-size: 1px;">
+                <p><b>NIK</b>: <span contenteditable="true">3171234567890123</span></p>
+                <p><b>Nama</b>: <span contenteditable="true">MIRA SETIAWAN</span></p>
+                <p><b>Tempat/Tgl Lahir</b>: <span contenteditable="true">JAKARTA, 18-02-1986</span></p>
+                <p><b>Jenis Kelamin</b>: <span contenteditable="true">PEREMPUAN</span></p>
+                <p><b>Gol. Darah</b>: <span contenteditable="true">B</span></p>
+                <p><b>Alamat</b>: <span contenteditable="true">JL. PASTI CEPAT A7/66</span></p>
+                <p><b>RT/RW</b>: <span contenteditable="true">007/008</span></p>
+                <p><b>Kel/Desa</b>: <span contenteditable="true">PEGADUNGAN</span></p>
+                <p><b>Kecamatan</b>: <span contenteditable="true">KALIDERES</span></p>
+                <p><b>Agama</b>: <span contenteditable="true">ISLAM</span></p>
+                <p><b>Status Perkawinan</b>: <span contenteditable="true">KAWIN</span></p>
+                <p><b>Pekerjaan</b>: <span contenteditable="true">PEGAWAI SWASTA</span></p>
+                <p><b>Kewarganegaraan</b>: <span contenteditable="true">WNI</span></p>
+                <p><b>Berlaku Hingga</b>: <span contenteditable="true">22-02-2017</span></p>
+            </div>
+            <div class="ktp-right">
+                <div class="photo-box">
+                    <input type="file" accept="image/*" onchange="previewPhoto(event)">
+                    <img id="photo-preview" src="" alt="Foto KTP">
+                </div>
+                <p><b>Jakarta Barat</b></p>
+                <p><b>02-12-2012</b></p>
+            </div>
+        </div>
+    </div>
+    <button id="ktp-generator" onclick="downloadKTP()">Download</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        function previewPhoto(event) {
+            const photoPreview = document.getElementById("photo-preview");
+            photoPreview.src = URL.createObjectURL(event.target.files[0]);
+            photoPreview.style.display = "block";
+        }
+
+        function downloadKTP() {
+            const container = document.querySelector(".ktp-container");
+            html2canvas(container).then((canvas) => {
+                const link = document.createElement("a");
+                link.download = "KTP.png";
+                link.href = canvas.toDataURL();
+                link.click();
+            });
+        }
+    </script>
+ </section>
+    
+
+
+
+
+<section id="halaman4" class="content" style="padding: 13px; margin-top: -10px;">
+  <h1 style="font-size: 18px; font-weight: bold; font-family: 'Orbitron', sans-serif; text-align: center; text-align: left; ">Live ASCII Text Generator</h1>
+    <p style="font-size: 10px;">Masukkan teks di bawah ini dan pilih gaya untuk mengubahnya menjadi ASCII art!</p>
+
+  <textarea id="input-text" placeholder="Type your text here..." style="width: 100%; height: 35px; padding: 5px; font-size: 16px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box;"></textarea>
+
+  <h2 style="font-family: 'Orbitron', sans-serif; font-size: 20px; padding-top: 5px; padding-bottom: 5px;">Scroll Bar</h2>
+
+  <div id="content-container" style="display: block; max-height: 500px; overflow-y: auto;"> 
+    <div class="ascii-box">
+      <h3>Style 1</h3>
+      <pre id="ascii-output-1"></pre>
+      <button class="copy-btn" onclick="copyToClipboard('ascii-output-1')">Copy</button>
+    </div>
+
+    <div class="ascii-box">
+      <h3>Style 2</h3>
+      <pre id="ascii-output-2"></pre>
+      <button class="copy-btn" onclick="copyToClipboard('ascii-output-2')">Copy</button>
+    </div>
+
+    <div class="ascii-box">
+      <h3>Style 3</h3>
+      <pre id="ascii-output-3"></pre>
+      <button class="copy-btn" onclick="copyToClipboard('ascii-output-3')">Copy</button>
+    </div>
+  </div>
+
+<script>
+  // Peta karakter dengan tiga variasi ASCII
+  const asciiMap = {
+    "A": {
+      style1: [
+        "░█████╗░",
+        "██╔══██╗",
+        "███████║",
+        "██╔══██║",
+        "██║░░██║",
+        "╚═╝░░╚═╝"
+      ],
+      style2: [
+        "╔═══╗",
+        "║╔═╗║",
+        "║║─║║",
+        "║╚═╝║",
+        "║╔═╗║",
+        "╚╝─╚╝"
+      ],
+      style3: [
+        "███████",
+        "██▀▄─██",
+        "██─▀─██",
+        "▀▄▄▀▄▄▀"
+      ]
+    },
+    "B": {
+      style1: [
+        "██████╗░",
+        "██╔══██╗",
+        "██████╦╝",
+        "██╔══██╗",
+        "██████╦╝",
+        "╚═════╝░"
+      ],
+      style2: [
+        "╔══╗",
+        "║╔╗║",
+        "║╚╝║",
+        "║╔═╝",
+        "║║░░",
+        "╚╝░░"
+      ],
+      style3: [
+        "███████",
+        "██▀▄─██",
+        "██─▀─██",
+        "▀▄▄▀▄▄▀"
+      ]
+    },
+    "C": {
+      style1: [
+        "░█████╗░",
+        "██╔═══╝░",
+        "██║░░░░░",
+        "██║░░░░░",
+        "╚█████╗░",
+        "░╚════╝░"
+      ],
+      style2: [
+        "╔═══╗",
+        "║╔═╗║",
+        "║║░╚╝",
+        "║║░╔╗",
+        "║╚═╝║",
+        "╚═══╝"
+      ],
+      style3: [
+        "███████",
+        "██▀▄─██",
+        "██─▀─██",
+        "▀▄▄▀▄▄▀"
+      ]
+    }
+    // Tambahkan karakter lainnya...
+  };
+
+  // Mengambil elemen input dan output
+  const inputText = document.getElementById("input-text");
+  const asciiOutput1 = document.getElementById("ascii-output-1");
+  const asciiOutput2 = document.getElementById("ascii-output-2");
+  const asciiOutput3 = document.getElementById("ascii-output-3");
+
+  // Event listener untuk mengubah teks ke ASCII
+  inputText.addEventListener("input", () => {
+    const text = inputText.value.toUpperCase();
+    const lines1 = ["", "", "", "", "", ""];
+    const lines2 = ["", "", "", "", "", ""];
+    const lines3 = ["", "", "", "", "", ""];
+
+    for (const char of text) {
+      if (asciiMap[char]) {
+        const asciiChar1 = asciiMap[char].style1 || [" "];
+        const asciiChar2 = asciiMap[char].style2 || [" "];
+        const asciiChar3 = asciiMap[char].style3 || [" "];
+
+        for (let i = 0; i < asciiChar1.length; i++) {
+          lines1[i] += asciiChar1[i] + " ";
+          lines2[i] += asciiChar2[i] + " ";
+          lines3[i] += asciiChar3[i] + " ";
+        }
+      } else {
+        for (let i = 0; i < lines1.length; i++) {
+          lines1[i] += " ".repeat(9);
+          lines2[i] += " ".repeat(6);
+          lines3[i] += " ".repeat(8);
+        }
+      }
+    }
+
+    asciiOutput1.textContent = lines1.join("\n");
+    asciiOutput2.textContent = lines2.join("\n");
+    asciiOutput3.textContent = lines3.join("\n");
+  });
+
+  // Fungsi untuk menyalin teks ke clipboard
+  function copyToClipboard(id) {
+    const textToCopy = document.getElementById(id).textContent;
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      alert("Text copied to clipboard!");
+    }).catch((err) => {
+      alert("Failed to copy text: " + err);
+    });
+  }
+</script>
+
+    </section>
+
+    <!-- Profile -->
+    <section id="halaman5" class="content">
+      <div id="menu-profil">
+        <h2>Profil</h2>
+        <div class="profil-info">
+          <img src="https://via.placeholder.com/100" alt="Foto Profil" class="profil-foto">
+          <p class="profil-nama">Nama Pengguna</p>
+          <p class="profil-email">email@domain.com</p>
+        </div>
+        <ul>
+          <li>Detail Akun</li>
+          <li>Privasi</li>
+          <li>Keluar</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Script untuk navigasi
+    const menuItems = document.querySelectorAll('.menu-item');
+    const contents = document.querySelectorAll('.content');
+
+    menuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const target = document.querySelector(item.dataset.target);
+        contents.forEach(content => content.style.display = 'none');
+        target.style.display = 'block';
+      });
+    });
+
+    // Menampilkan Halaman 1 secara default
+    contents.forEach(content => content.style.display = 'none');
+    document.querySelector('#Ai').style.display = 'block';
+
+    // Profil menu toggle
+    const pengaturanItem = document.querySelector('[data-target="#halaman5"]');
+    const menuProfil = document.getElementById('menu-profil');
+
+    pengaturanItem.addEventListener('click', () => {
+      if (menuProfil.style.left === '0px') {
+        menuProfil.style.left = '-300px';  // Menutup menu
+      } else {
+        menuProfil.style.left = '0px';  // Menampilkan menu
+      }
+    });
+    
+    
+// Darkmode
+    const toggle = document.getElementById("darkModeToggle");
+
+toggle.addEventListener("click", function () {
+
+  this.classList.toggle("active");
+  
+
+  document.body.classList.toggle("dark-mode");
+});
+
+  // TIME
+function updateDateTime() {
+  const dateTimeElement = document.getElementById("dateTime");
+  
+  // Opsi format hari, tanggal, dan waktu
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false
+  };
+
+  // Ambil waktu saat ini
+  const now = new Date();
+  const formattedDate = now.toLocaleDateString("id-ID", options);
+
+  // Tampilkan waktu
+  dateTimeElement.textContent = formattedDate;
+}
+
+// Perbarui waktu setiap detik
+setInterval(updateDateTime, 1000);
+
+// Inisialisasi pertama kali
+updateDateTime();
+
+    
+    
+    
+    
+
+  </script>
+
+
+</body>
+</html>
